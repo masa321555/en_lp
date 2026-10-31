@@ -1,0 +1,5 @@
+# ローカル開発用（.dev.vars にコピーして値を入れる。.dev.vars は git に含めない）
+RESEND_API_KEY=re_xxxxxxxx
+TURNSTILE_SECRET=0x4AAAAAAA_xxxxxxxx
+CONTACT_TO=info@example.com
+CONTACT_FROM=合同会社en LP <noreply@example.com>

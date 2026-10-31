@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>手作業をAIに渡せる業務フローへ｜合同会社en</title>
+<meta name="description" content="生成AIを導入しても現場の手作業が減らない企業へ。広告代理店の実務9年の経験で、レポート・分析・制作・契約書確認などの作業を、担当者が繰り返し使えるAI業務フローに設計します。初回相談無料。">
+<!-- TODO: 公開URL確定後に差し替え -->
+<link rel="canonical" href="https://example.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="手作業を、工程に変える。｜合同会社en">
+<meta property="og:description" content="広告代理店の現場で9年。レポート、分析、LP制作、契約書レビューなど18以上の業務を、AIで繰り返し実行できる工程に設計してきました。">
+<meta property="og:image" content="https://example.com/img/ogp.jpg">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:site_name" content="合同会社en">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- GTM: head snippet here -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "合同会社en",
+      "url": "https://example.com/",
+      "founder": {"@type": "Person", "name": "三井正相"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "どんな会社が対象ですか", "acceptedAnswer": {"@type": "Answer", "text": "広告代理店・制作会社、またはマーケティング部門を持つ事業会社。AIツールは契約済みだが現場の作業に落ちていない、という状況が最も効果が出ます。"}},
+        {"@type": "Question", "name": "ChatGPTとClaudeのどちらですか。社内のAI環境でも対応できますか", "acceptedAnswer": {"@type": "Answer", "text": "主にClaudeで設計しますが、工程の定義自体はツールに依存しません。社内で契約済みのAI環境に合わせて設計します。"}},
+        {"@type": "Question", "name": "社内データを外部に出せません", "acceptedAnswer": {"@type": "Answer", "text": "設計段階は匿名化・ダミーデータで進められます。本番データの取り扱いは契約書で範囲を定めます。"}},
+        {"@type": "Question", "name": "料金は", "acceptedAnswer": {"@type": "Answer", "text": "工程の数と複雑さで異なるため、相談時にお見積りします。1工程の小規模から対応します。"}},
+        {"@type": "Question", "name": "1工程だけでも依頼できますか", "acceptedAnswer": {"@type": "Answer", "text": "はい。月次レポート1本など、1つの業務から着手できます。効果を確認してから次の工程に広げる進め方を基本にしています。"}},
+        {"@type": "Question", "name": "API連携やシステム開発も頼めますか", "acceptedAnswer": {"@type": "Answer", "text": "既存ツールとのAPI連携や小規模な自動化は対応します。大規模なシステム開発そのものは対象外で、必要な場合は開発会社と役割を分けます。"}},
+        {"@type": "Question", "name": "常駐やフルタイムは可能ですか", "acceptedAnswer": {"@type": "Answer", "text": "週10〜15時間程度・非同期の業務委託が基本です。常駐は承っていません。"}},
+        {"@type": "Question", "name": "納品後、自分たちで直せますか", "acceptedAnswer": {"@type": "Answer", "text": "納品時に構造・使い方・修正ポイントを文書化します。軽微な変更であれば、担当者自身で調整できる状態を目指します。"}},
+        {"@type": "Question", "name": "どれくらいの期間でできますか", "acceptedAnswer": {"@type": "Answer", "text": "1工程なら、棚卸しから試作まで2〜4週間が目安です。"}},
+        {"@type": "Question", "name": "契約形態は", "acceptedAnswer": {"@type": "Answer", "text": "合同会社enとの業務委託契約。フリーランス保護法に沿った契約書をこちらから提示できます。"}}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<!-- GTM: body snippet here -->
+<a class="skip" href="#main">本文へ移動</a>
+
+<header class="nav" id="nav">
+  <div class="nav__bar">
+    <a class="nav__brand" href="#top" aria-label="合同会社en トップへ"><span class="nav__brand-sub">合同会社</span>en</a>
+    <nav class="nav__links" id="nav-links" aria-label="ページ内リンク">
+      <a href="#benefits">できること</a>
+      <a href="#how">進め方</a>
+      <a href="#proof">実績</a>
+      <a href="#faq">よくある質問</a>
+      <a class="btn btn--sm btn--light nav__cta" href="#form">AI化できる業務を相談する</a>
+    </nav>
+    <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="メニューを開く">
+      <span class="nav__toggle-line"></span>
+      <span class="nav__toggle-line"></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 1. ヒーロー -->
+<section class="hero" id="top">
+  <picture class="hero__media">
+    <source media="(max-width: 767px)" type="image/webp" srcset="img/hero_kv_sp.webp">
+    <source media="(max-width: 767px)" srcset="img/hero_kv_sp.jpg">
+    <source type="image/webp" srcset="img/hero_kv.webp">
+    <img src="img/hero_kv.jpg" width="2560" height="1097" alt="作業台の上に置かれた一枚の手書きメモと、その奥へ等間隔に並ぶ同じ書式の書類" fetchpriority="high">
+  </picture>
+  <!-- 減速設定なしの環境でJSがsourceを差し込んで再生。PCは21:9、SPは4:5に切り出した軽量版（0.5MB） -->
+  <video class="hero__video" id="hero-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"
+         data-webm="video/hero.webm" data-mp4="video/hero.mp4" data-webm-sp="video/hero_sp.webm" data-mp4-sp="video/hero_sp.mp4"></video>
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <h1 class="hero__title">手作業を、<br>工程に変える。</h1>
+      <p class="hero__sub">つくるのは、ツールではなく、<br class="br-sp">AIに渡せる手順です。</p>
+      <p class="hero__lead">広告代理店の現場で9年。レポート、分析、LP制作、<br class="br-pc">契約書レビューなど、18以上の業務フローを<br class="br-pc">AIで繰り返し実行できる形に設計・運用してきました。<br class="br-pc">現場に残る手作業を、担当者自身で回せる工程へ変えます。</p>
+      <div class="hero__actions">
+        <a class="btn btn--light" href="#form">自社でAI化できる業務を相談する</a>
+        <a class="link link--on-dark" href="#how">進め方を見る</a>
+      </div>
+      <p class="hero__proof"><strong>年間50,000時間削減</strong>のAI業務改善プロジェクトを企画・開発<br>大手広告代理店 社内アワード受賞プロジェクト</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2. 課題→解決 -->
+<section class="section section--paper reveal" id="problem">
+  <div class="container">
+    <h2 class="h2">AIを入れた代理店は増えた。<br>手作業が減った代理店は、まだ少ない。</h2>
+    <div class="prose prose--2col">
+      <p>生成AIを導入しても、レポート集計、資料作成、LP制作、契約書確認などの手作業が残る現場は少なくありません。原因はAIの性能よりも、実作業の手順がAIに渡せる形に整理されていないことです。</p>
+      <p>手作業の手順を、入力・処理・出力・検算まで定義した「再利用できる業務フロー」に変えます。次回からは、担当者が同じ手順・同じ品質で実行できます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2b. 向いている企業 -->
+<section class="section reveal" id="fit">
+  <div class="container">
+    <h2 class="h2">こんな現場に向いています</h2>
+    <ul class="fit">
+      <li>毎月、同じ集計・レポート作成を手作業で繰り返している</li>
+      <li>制作のたびに、同じ準備・同じ確認を一からやり直している</li>
+      <li>担当者によって、成果物の品質やスピードが変わる</li>
+      <li>AIツールは契約したが、現場の業務に定着していない</li>
+    </ul>
+    <p class="fit__note">一つでも当てはまれば、まず工程の棚卸しから始められます。</p>
+  </div>
+</section>
+
+<!-- 3. ベネフィット -->
+<section class="section section--paper reveal" id="benefits">
+  <div class="container">
+    <h2 class="h2">現場に残る仕組みだけを、つくる。</h2>
+    <ul class="benefits">
+      <li class="benefits__item">
+        <h3 class="h3">担当が変わっても、同じ手順・同じ品質で回る。</h3>
+        <p>一度業務フローとして設計した工程は、担当者が変わっても同じ手順で実行できます。入力条件・手順・確認方法まで文書化するため、引き継ぎの負担も減らせます。</p>
+      </li>
+      <li class="benefits__item">
+        <h3 class="h3">9年間の代理店実務を、AIが扱える業務フローへ翻訳する。</h3>
+        <p>制作・分析・契約など、広告代理店の実務を9年間経験してきました。業務背景から理解できるため、現場の作業を一から説明し直す負担を減らし、すぐに工程設計へ入れます。</p>
+      </li>
+      <li class="benefits__item">
+        <h3 class="h3">集計も転記も、全行を検算してから納品。</h3>
+        <p>集計・転記では、生成結果とは別の方法で照合する検算工程を組み込みます。人の目だけに頼らず、数値ミスを工程側で減らします。</p>
+      </li>
+      <li class="benefits__item">
+        <h3 class="h3">定例を増やさず、仕組みだけ増やす。</h3>
+        <p>まずは月次レポートなど1つの業務から着手できます。効果を確認してから、次の工程へ段階的に広げます。定例会議は必要最小限にします。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3b. 納品物 -->
+<section class="section reveal" id="deliverables">
+  <div class="container deliverables">
+    <div class="deliverables__copy">
+      <h2 class="h2">手元に残るもの</h2>
+      <p class="prose">納品するのは、動くフローだけではありません。担当者が自分で回し、直し、引き継げるための文書一式を含みます。</p>
+    </div>
+    <ol class="deliverables__list">
+      <li><strong>AI業務フロー</strong><span>入力→処理→出力→検算の一連の工程</span></li>
+      <li><strong>入出力仕様</strong><span>受け取るデータの形式と、出てくる成果物の形式</span></li>
+      <li><strong>AIへの指示（プロンプト・スキル）</strong><span>再利用できる形で整理した指示書</span></li>
+      <li><strong>検算ルール</strong><span>生成結果を別の方法で照合する手順</span></li>
+      <li><strong>操作マニュアル</strong><span>担当者が日常で使うための手順書</span></li>
+      <li><strong>修正ポイント一覧</strong><span>軽微な変更を自分たちで行うための箇所と方法</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. タグライン・リビール -->
+<section class="tagline" id="tagline" aria-label="タグライン">
+  <div class="container">
+    <p class="tagline__text" id="tagline-text">
+      <span class="tagline__chunk">月末の</span><span class="tagline__chunk">集計が、</span><br>
+      <span class="tagline__chunk">朝の</span><span class="tagline__chunk">確認作業に</span><span class="tagline__chunk">なる。</span>
+    </p>
+  </div>
+</section>
+
+<!-- 4b. Before / After -->
+<section class="section section--paper reveal" id="before-after">
+  <div class="container">
+    <h2 class="h2 h2--sm">例：月次マーケティングレポート</h2>
+    <div class="ba">
+      <div class="ba__col ba__col--before">
+        <p class="ba__label">Before</p>
+        <p class="ba__time">約3時間<span>／月・担当者の手作業</span></p>
+        <ol class="ba__steps">
+          <li>GA4・Search Consoleなどから手動でデータ取得</li>
+          <li>Excelへ転記し、前月比・前年比を計算</li>
+          <li>グラフを作り直し、コメントを書く</li>
+          <li>上長の確認で数値ミスが見つかり、やり直し</li>
+        </ol>
+      </div>
+      <div class="ba__col ba__col--after">
+        <p class="ba__label">After</p>
+        <p class="ba__time">約15分<span>／月・担当者の確認作業</span></p>
+        <ol class="ba__steps">
+          <li>エクスポートしたデータをフローに投入</li>
+          <li>自動で集計・比較・コメント生成</li>
+          <li>別方法で検算し、差異があれば明示</li>
+          <li>担当者は結果を確認して提出</li>
+        </ol>
+      </div>
+    </div>
+    <!-- 仮: 所要時間は想定例。実案件の計測値に差し替える -->
+    <p class="ba__note">所要時間は代表的な工程をもとにした想定例です。実際の時間は、データの種類と工程の数で変わります。</p>
+  </div>
+</section>
+
+<!-- 5. 進め方 -->
+<section class="section reveal" id="how">
+  <div class="container">
+    <h2 class="h2">進め方</h2>
+    <ol class="steps">
+      <li class="steps__item">
+        <span class="steps__num" aria-hidden="true">1</span>
+        <h3 class="h3">工程の棚卸し<span class="steps__note">（無料相談）</span><br>自動化候補を1〜3件に絞る</h3>
+        <p>時間がかかる・繰り返しが多い・ミスが起きやすい作業を洗い出し、効果と実現性からAI化する優先順位を決めます。</p>
+      </li>
+      <li class="steps__item">
+        <span class="steps__num" aria-hidden="true">2</span>
+        <h3 class="h3">入力・処理・出力・検算を設計し、<br class="br-pc">実データで試作</h3>
+        <p>入力データと完成形を確認し、処理手順・AIへの指示・検算方法を設計します。実データで試作し、担当者が再現できる状態まで調整します。</p>
+      </li>
+      <li class="steps__item">
+        <span class="steps__num" aria-hidden="true">3</span>
+        <h3 class="h3">納品・文書化・改善</h3>
+        <p>納品時に、構造・使い方・修正ポイントを文書化します。継続支援では、実運用の結果を見ながら月次で改善します。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 6. 実績・証拠 -->
+<section class="section section--paper reveal" id="proof">
+  <div class="container">
+    <h2 class="h2">年間50,000時間の削減を<br class="br-sp">生んだのは、<br>AIそのものではなく、<br class="br-sp">AIに渡せる工程設計でした。</h2>
+    <dl class="proof">
+      <div class="proof__item proof__item--main">
+        <dt><span class="proof__figure">50,000</span><span class="proof__unit">時間／年</span></dt>
+        <dd>大手広告代理店の社内アワード受賞プロジェクトにて、定性分析業務を年間50,000時間削減するAI業務改善の企画・開発を担当。</dd>
+      </div>
+      <div class="proof__item">
+        <dt><span class="proof__figure">18</span><span class="proof__unit">業務以上</span></dt>
+        <dd>18以上の業務フローをAI化・運用。検索分析、月次レポート、LP実装、契約書レビュー、工程表生成など。</dd>
+      </div>
+      <div class="proof__item">
+        <dt><span class="proof__figure">9</span><span class="proof__unit">年</span></dt>
+        <dd>大手広告代理店に9年間参画し、自動車メーカーの販売会社向けデジタル施策を、制作・分析・運用まで担当。</dd>
+      </div>
+      <div class="proof__item">
+        <dt class="proof__text">マーケター育成スクール「マケキャン byDMM.com」で講師を担当</dt>
+        <dd>マーケターを目指す受講生に、デジタルマーケティングの実務を教えてきました。</dd>
+      </div>
+      <div class="proof__item">
+        <dt class="proof__text">東京都主催 都知事杯オープンデータ・ハッカソン2026 Final Stage選出</dt>
+        <dd>486件の提案から24件に選出。詐欺検知PWA「サギカモ」を個人で企画・開発。</dd>
+      </div>
+    </dl>
+    <div class="cta-mid">
+      <a class="btn btn--dark" href="#form">自社でAI化できる業務を相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 対象工程の例 -->
+<section class="section reveal" id="scope">
+  <div class="container">
+    <h2 class="h2">AI化している業務の例</h2>
+    <p class="prose">実際にAI化・運用している業務の一例です。既製品を当てはめるのではなく、御社の入力データ・手順・成果物に合わせて設計します。</p>
+    <div class="flows">
+      <div class="flow">
+        <h3 class="h3">月次マーケティングレポート</h3>
+        <ol class="flow__steps">
+          <li>データ取得</li><li>集計</li><li>分析</li><li>コメント生成</li><li>検算</li><li>出力</li>
+        </ol>
+      </div>
+      <div class="flow">
+        <h3 class="h3">SNS投稿データの集計</h3>
+        <ol class="flow__steps">
+          <li>転記</li><li>重複確認</li><li>集計</li><li>検算</li><li>納品形式へ整形</li>
+        </ol>
+      </div>
+    </div>
+    <p class="chips__lead">ほかに運用中の業務</p>
+    <ul class="chips" aria-label="対象工程の例">
+      <li>検索コンソール分析</li>
+      <li>口コミ・レビュー分析</li>
+      <li>LP構成案・実装</li>
+      <li>キャッチコピー開発</li>
+      <li>業務委託契約書の生成・レビュー</li>
+      <li>ガントチャート生成</li>
+      <li>経緯報告書の作成</li>
+    </ul>
+    <div class="scope-note">
+      <div>
+        <h3 class="h3">得意な領域</h3>
+        <p>繰り返し発生する制作・分析・集計・文書作成。入力と成果物の形が決まっている業務ほど、効果が出ます。</p>
+      </div>
+      <div>
+        <h3 class="h3">向いていない例</h3>
+        <p>判断基準が毎回変わる業務、完全自動化が目的の大規模なシステム開発。必要な場合は開発会社と役割を分けます。</p>
+      </div>
+    </div>
+    <div class="cta-mid">
+      <a class="btn btn--dark" href="#form">自社でAI化できる業務を相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. プロフィール＋稼働スタイル -->
+<section class="section section--paper reveal" id="profile">
+  <div class="container profile">
+    <picture class="profile__photo">
+      <source type="image/webp" srcset="img/profile.webp">
+      <img src="img/profile.jpg" width="800" height="1000" alt="三井正相のポートレート" loading="lazy">
+    </picture>
+    <div class="profile__who">
+      <h2 class="h2 h2--sm">三井正相<span class="profile__role">合同会社en 代表</span></h2>
+      <p>ウェブデザイナー、ディレクターを経て独立。大手広告代理店にプロデューサーとして9年間参画し、制作・分析・運用の実務を経験。現在は、その手作業をAIで再現できる業務フローへ設計する支援を行っています。</p>
+      <div class="profile__certs">
+        <h3 class="profile__certs-title">専門性・認定</h3>
+        <p>生成AIパスポート／G検定／Googleアナリティクス認定資格／ウェブ解析士／Certified ScrumMaster®／経済産業省「マナビDX Quest」修了</p>
+        <a class="link link--sm" href="https://www.openbadge-global.com/ns/portal/openbadge/public/assertions/user/QUM0dXV4RzNBdHBoN1haT25XeUJQdz09" target="_blank" rel="noopener">すべての認定をオープンバッジで見る</a>
+      </div>
+    </div>
+    <div class="profile__style">
+      <h3 class="h3">週10〜15時間程度の稼働。<br>Slack中心・非同期で進めます。</h3>
+      <p>成果物ベースの業務委託を基本とし、Slack・メールなどの非同期コミュニケーションを中心に進めます。定例会議は必要最小限にします。</p>
+      <h3 class="h3">属人化を減らすのは、<br>自動化だけではなく、文書化です。</h3>
+      <p>納品時に、構造・使い方・修正ポイントを文書化します。軽微な変更であれば、担当者自身で調整できる状態を目指します。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="section reveal" id="faq">
+  <div class="container container--narrow">
+    <h2 class="h2">よくある質問</h2>
+    <div class="faq">
+      <details class="faq__item"><summary>どんな会社が対象ですか</summary><div class="faq__body"><p>広告代理店・制作会社、またはマーケティング部門を持つ事業会社。AIツールは契約済みだが現場の作業に落ちていない、という状況が最も効果が出ます。</p></div></details>
+      <details class="faq__item"><summary>ChatGPTとClaudeのどちらですか。社内のAI環境でも対応できますか</summary><div class="faq__body"><p>主にClaudeで設計しますが、工程の定義自体はツールに依存しません。社内で契約済みのAI環境に合わせて設計します。</p></div></details>
+      <details class="faq__item"><summary>社内データを外部に出せません</summary><div class="faq__body"><p>設計段階は匿名化・ダミーデータで進められます。本番データの取り扱いは契約書で範囲を定めます。</p></div></details>
+      <details class="faq__item"><summary>料金は</summary><div class="faq__body"><p>工程の数と複雑さで異なるため、相談時にお見積りします。1工程の小規模から対応します。</p></div></details>
+      <details class="faq__item"><summary>1工程だけでも依頼できますか</summary><div class="faq__body"><p>はい。月次レポート1本など、1つの業務から着手できます。効果を確認してから次の工程に広げる進め方を基本にしています。</p></div></details>
+      <details class="faq__item"><summary>API連携やシステム開発も頼めますか</summary><div class="faq__body"><p>既存ツールとのAPI連携や小規模な自動化は対応します。大規模なシステム開発そのものは対象外で、必要な場合は開発会社と役割を分けます。</p></div></details>
+      <details class="faq__item"><summary>常駐やフルタイムは可能ですか</summary><div class="faq__body"><p>週10〜15時間程度・非同期の業務委託が基本です。常駐は承っていません。</p></div></details>
+      <details class="faq__item"><summary>納品後、自分たちで直せますか</summary><div class="faq__body"><p>納品時に構造・使い方・修正ポイントを文書化します。軽微な変更であれば、担当者自身で調整できる状態を目指します。</p></div></details>
+      <details class="faq__item"><summary>どれくらいの期間でできますか</summary><div class="faq__body"><p>1工程なら、棚卸しから試作まで2〜4週間が目安です。</p></div></details>
+      <details class="faq__item"><summary>契約形態は</summary><div class="faq__body"><p>合同会社enとの業務委託契約。フリーランス保護法に沿った契約書をこちらから提示できます。</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. リスク回避＋最終CTA（フォーム） -->
+<section class="section section--ink reveal" id="form">
+  <div class="container form-wrap">
+    <div class="form-wrap__copy">
+      <h2 class="h2">棚卸しから、<br>始めませんか。</h2>
+      <p>初回相談は無料です。現場で時間を食っている作業を一緒に洗い出し、AI化できる業務を1〜3件に絞ってお返しします。1工程から始められ、効果が見えなければそこで終了できます。</p>
+      <p class="form-wrap__note">1営業日以内に返信します。</p>
+    </div>
+    <!-- 送信先は同一Workerの /api/contact（src/index.js）。Resend経由でメール通知 -->
+    <form class="form" id="contact-form" action="/api/contact" method="post" novalidate data-endpoint="/api/contact">
+      <!-- ハニーポット（表示しない） -->
+      <div class="form__hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+      <div class="form__row">
+        <label for="f-company">会社名</label>
+        <input id="f-company" name="company" type="text" required autocomplete="organization">
+        <p class="form__error" id="f-company-error" aria-live="polite"></p>
+      </div>
+      <div class="form__row">
+        <label for="f-name">お名前</label>
+        <input id="f-name" name="name" type="text" required autocomplete="name">
+        <p class="form__error" id="f-name-error" aria-live="polite"></p>
+      </div>
+      <div class="form__row">
+        <label for="f-email">メールアドレス</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email" inputmode="email">
+        <p class="form__error" id="f-email-error" aria-live="polite"></p>
+      </div>
+      <div class="form__row">
+        <label for="f-status">AIツールの導入状況</label>
+        <select id="f-status" name="status" required>
+          <option value="">選択してください</option>
+          <option>未導入</option>
+          <option>導入済みだが活用途上</option>
+          <option>活用中</option>
+        </select>
+        <p class="form__error" id="f-status-error" aria-live="polite"></p>
+      </div>
+      <div class="form__row">
+        <label for="f-task">AI化したい作業<span class="form__opt">任意</span></label>
+        <textarea id="f-task" name="task" rows="4" placeholder="例：月次レポートの集計、SNS投稿データの転記、契約書の確認"></textarea>
+      </div>
+      <!-- Turnstile: data-sitekey を本番のサイトキーに置換（未設定の間はウィジェット非表示・Worker側も検証スキップ） -->
+      <div class="form__row form__turnstile cf-turnstile" data-sitekey="" data-theme="dark" data-size="flexible" data-language="ja"></div>
+      <button class="btn btn--light form__submit" type="submit">自社でAI化できる業務を相談する</button>
+      <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__brand">合同会社en</p>
+    <nav class="footer__links" aria-label="フッター">
+      <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+    <p class="footer__copy">© 2026 en LLC</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<!-- Cloudflare Turnstile（サイトキー設定時のみ読み込む。main.js が制御） -->
+<!-- Cloudflare Web Analytics: ダッシュボードで発行した token に置換して有効化 -->
+<!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
+</body>
+</html>
