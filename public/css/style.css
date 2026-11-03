@@ -18,6 +18,7 @@
   --line: #d9d5cc;
   --line-on-dark: #3a404a;
   --accent: #a8884d;
+  --accent-on-dark: #c9a765;
   --error: #e0a89a;
 
   --font: "IBM Plex Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -177,6 +178,7 @@ p { text-wrap: pretty; }
 }
 .hero__inner { order: 1; padding-top: 112px; padding-bottom: var(--s-600); }
 .hero__copy { max-width: 680px; }
+.hero__eyebrow { font-size: 15px; font-weight: 600; letter-spacing: 0.04em; color: var(--accent-on-dark); margin-bottom: var(--s-200); }
 .hero__title {
   font-size: 40px; line-height: 1.25; font-weight: 700; letter-spacing: 0.02em;
   background: linear-gradient(90deg, #ffffff 0%, #b4b4b4 100%);
@@ -199,6 +201,7 @@ p { text-wrap: pretty; }
 .is-loaded .hero__copy > :nth-child(3) { transition-delay: 260ms; }
 .is-loaded .hero__copy > :nth-child(4) { transition-delay: 340ms; }
 .is-loaded .hero__copy > :nth-child(5) { transition-delay: 420ms; }
+.is-loaded .hero__copy > :nth-child(6) { transition-delay: 500ms; }
 
 /* hero video (PC only) */
 .hero__video { display: none; }
@@ -330,7 +333,9 @@ p { text-wrap: pretty; }
 /* deliverables */
 .deliverables { display: grid; gap: var(--s-500); }
 .deliverables__copy .h2 { margin-bottom: var(--s-300); }
-.deliverables__list { display: grid; gap: var(--s-200); counter-reset: dl; }
+.deliverables__groups { display: grid; gap: var(--s-400); counter-reset: dl; }
+.deliverables__group-title { font-size: 14px; font-weight: 600; letter-spacing: 0.06em; color: var(--accent); margin-bottom: var(--s-100); }
+.deliverables__list { display: grid; gap: var(--s-200); }
 .deliverables__list li { display: grid; gap: var(--s-25); padding: var(--s-200) 0 var(--s-200) var(--s-600); border-top: 1px solid var(--line); position: relative; counter-increment: dl; }
 .deliverables__list li::before { content: counter(dl, decimal-leading-zero); position: absolute; left: 0; top: var(--s-200); font-size: 14px; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1.9; }
 .deliverables__list strong { font-weight: 600; }
