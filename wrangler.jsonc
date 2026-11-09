@@ -7,8 +7,15 @@
     "directory": "./public",
     "binding": "ASSETS",
     "not_found_handling": "404-page",
-    "run_worker_first": ["/api/*"]
+    // 非本番ホスト→本番への301リダイレクトを全パスで効かせるため、全リクエストをWorker経由にする
+    "run_worker_first": true
   },
+  "routes": [
+    { "pattern": "en-ai.co.jp", "custom_domain": true },
+    { "pattern": "www.en-ai.co.jp", "custom_domain": true }
+  ],
+  // 旧URL（workers.dev）も生かしてWorkerの301で本番へ転送する
+  "workers_dev": true,
   "observability": { "enabled": true }
   // Secrets（ダッシュボードまたは `npx wrangler secret put <NAME>` で設定。コードや設定ファイルに書かない）:
   //   RESEND_API_KEY   … Resend のAPIキー
