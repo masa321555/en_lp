@@ -6,6 +6,12 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    // 本番ドメイン以外（workers.dev / www）からのアクセスは本番へ301リダイレクト
+    const CANONICAL_HOST = 'en-ai.co.jp';
+    if (url.hostname !== CANONICAL_HOST && url.hostname !== 'localhost' && !url.hostname.startsWith('127.')) {
+      url.hostname = CANONICAL_HOST; url.protocol = 'https:'; url.port = '';
+      return Response.redirect(url.toString(), 301);
+    }
     if (url.pathname === '/api/contact') {
       if (request.method !== 'POST') return json({ ok: false, error: 'method' }, 405);
       return handleContact(request, env);

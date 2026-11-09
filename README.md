@@ -44,7 +44,7 @@ npm run dev                      # http://localhost:8787
 本番URLでフォームを送信し、`CONTACT_TO` にメールが届くことを確認。届かない場合は Worker の Logs（observability 有効）で `error` の種類を確認: `config`=Secrets/Vars未設定、`turnstile`=検証失敗、`send`=Resend側のエラー（ドメイン未認証が多い）
 
 ## 公開前に設定するもの
-1. **公開URL**: `index.html` の `<link rel="canonical">`、`og:url`、`og:image`、JSON-LDの `url` を本番URLに置換（現在 `https://example.com/`）
+1. **公開URL**: `https://en-ai.co.jp/` に設定済み（canonical / og:url / og:image / JSON-LD）。workers.dev と www からは Worker が 301 で本番へリダイレクト
 2. **計測**: まず Cloudflare Web Analytics（上記）。GTM/GA4 を入れる場合は `<!-- GTM: ... -->` の位置に挿入し、Cookie同意の要否を確認
 3. **フォーム送信先**: `/api/contact`（同一Worker）に設定済み。上記 Secrets / Vars を設定すれば動作
 4. **プライバシーポリシー**: `privacy.html` の【仮】部分を正式文面に差し替え
