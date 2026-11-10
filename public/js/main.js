@@ -124,9 +124,38 @@
     });
   }
 
+  /* ---------- 計測: Googleタグ（gtag.js）が読み込まれているときだけ送信 ---------- */
+  function track(name, params) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+  // CTAクリック（フォームへのリンク）。どの位置のCTAが押されたかを cta_location で区別
+  Array.prototype.slice.call(document.querySelectorAll('a[href="#form"]')).forEach(function (a) {
+    a.addEventListener('click', function () {
+      var sec = a.closest('section, header');
+      track('cta_click', { cta_location: sec && sec.id ? sec.id : 'unknown', link_text: a.textContent.trim() });
+    });
+  });
+  // フォーム到達（フォームのセクションが初めて画面に入ったとき）
+  var formSection = document.getElementById('form');
+  if (formSection && 'IntersectionObserver' in window) {
+    var formViewObs = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { track('form_view'); obs.disconnect(); }
+      });
+    }, { threshold: 0.3 });
+    formViewObs.observe(formSection);
+  }
+
   /* ---------- form: client validation ---------- */
   var form = document.getElementById('contact-form');
   if (form) {
+    // 入力開始（最初の1回だけ）
+    var formStarted = false;
+    form.addEventListener('input', function () {
+      if (formStarted) return;
+      formStarted = true;
+      track('form_start');
+    });
     // Turnstile はサイトキーが設定されているときだけ読み込む
     var ts = form.querySelector('.cf-turnstile');
     if (ts && ts.getAttribute('data-sitekey')) {
@@ -189,6 +218,7 @@
         .then(function (res) { return res.json().catch(function () { return { ok: res.ok }; }); })
         .then(function (data) {
           if (!data || !data.ok) throw new Error(data && data.error ? data.error : 'bad status');
+          track('generate_lead', { form_id: 'contact-form' });
           form.reset();
           if (window.turnstile && typeof window.turnstile.reset === 'function') { try { window.turnstile.reset(); } catch (e) {} }
           status.textContent = '送信しました。1営業日以内に返信します。';

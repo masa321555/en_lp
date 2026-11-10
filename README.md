@@ -8,6 +8,14 @@
 - `img/` … ヒーローKV（PC: hero_kv.webp/jpg 2560×1097、SP: hero_kv_sp.webp/jpg 1080×1350）、OGP（ogp.jpg 1200×630）、favicon.svg
 - `privacy.html` … プライバシーポリシー（仮文面）
 - `404.html` … 404ページ
+- `sitemap.xml` / `robots.txt` … 検索エンジン向け（Search Console にサイトマップを送信）
+
+## 計測イベント（Googleタグ導入時に自動で有効化）
+`js/main.js` の `track()` が、`gtag` が読み込まれている場合のみ GA4 にイベントを送る。
+- `cta_click` … フォームへのCTAクリック（`cta_location` = nav / top / proof / scope）
+- `form_view` … フォームのセクションに到達
+- `form_start` … フォーム入力を開始
+- `generate_lead` … 送信完了（GA4 でキーイベントに設定する）
 
 ## デプロイ（Cloudflare Workers + Static Assets）
 
