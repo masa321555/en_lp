@@ -10,8 +10,12 @@
 - `404.html` … 404ページ
 - `sitemap.xml` / `robots.txt` … 検索エンジン向け（Search Console にサイトマップを送信）
 
-## 計測イベント（Googleタグ導入時に自動で有効化）
-`js/main.js` の `track()` が、`gtag` が読み込まれている場合のみ GA4 にイベントを送る。
+## 計測
+- Google タグ: `index.html` に `GTM-TLCSZM95` を設置（GA4 測定ID `G-LTCB5JFS2R` を配信）
+- Cloudflare Web Analytics: ダッシュボードの自動セットアップで有効（HTML側の設定は不要）
+
+### イベント
+`js/main.js` の `track()` が `gtag('event', …)` で GA4 にイベントを送る。
 - `cta_click` … フォームへのCTAクリック（`cta_location` = nav / top / proof / scope）
 - `form_view` … フォームのセクションに到達
 - `form_start` … フォーム入力を開始
