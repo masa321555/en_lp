@@ -11,15 +11,137 @@
 <main id="main" class="section">
   <div class="container container--narrow">
     <h1 class="h2">プライバシーポリシー</h1>
-    <!-- 仮: 本番公開前に正式文面へ差し替え -->
-    <div class="prose">
-      <p>合同会社en（以下「当社」）は、お問い合わせフォームから取得した会社名・氏名・メールアドレス等の個人情報を、お問い合わせへの回答および業務上の連絡の目的にのみ利用し、ご本人の同意なく第三者に提供しません。</p>
-      <h2 class="h3">アクセス解析ツールについて</h2>
-      <p>当サイトでは、サイトの利用状況を把握し改善に役立てるため、Google LLC が提供する「Google アナリティクス」および Cloudflare, Inc. が提供する「Cloudflare Web Analytics」を利用しています。</p>
-      <p>Google アナリティクスは Cookie を使用して、閲覧したページ、滞在時間、おおよその地域、利用端末などの情報を収集します。また、Google シグナルの機能により、Google アカウントにログインしている方について、年齢層・性別・興味関心などの情報が統計的に集計された形で当社に提供されることがあります。これらの情報から当社が個人を特定することはありません。収集された情報は <a class="link" href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Google のプライバシーポリシー</a>に基づいて管理されます。</p>
-      <p>Google アナリティクスによる情報の収集を望まない場合は、Google が提供する<a class="link" href="https://tools.google.com/dlpage/gaoptout?hl=ja" target="_blank" rel="noopener">オプトアウト アドオン</a>を利用することで無効にできます。Cloudflare Web Analytics は Cookie を使用しません。</p>
-      <p>【仮】本ページの文面は公開前に正式なものへ差し替えてください（取得する情報・利用目的・開示請求の窓口 など）。</p>
-      <p><a class="link" href="index.html">トップページへ戻る</a></p>
+    <style>
+      .policy { max-width: 40em; }
+      .policy p + p { margin-top: var(--s-200); }
+      .policy h2 { font-size: 20px; line-height: 1.6; font-weight: 600; letter-spacing: 0.02em; margin: var(--s-600) 0 var(--s-200); }
+      .policy ul, .policy ol { margin: var(--s-200) 0 0; padding-left: 1.4em; }
+      .policy ul { list-style: disc; }
+      .policy ol { list-style: decimal; }
+      .policy li + li { margin-top: var(--s-100); }
+      .policy dl { margin-top: var(--s-200); display: grid; grid-template-columns: 7em 1fr; gap: var(--s-100) var(--s-200); }
+      .policy dt { font-weight: 600; }
+      .policy dd { margin: 0; }
+      .policy .policy__table { margin-top: var(--s-300); border-top: 1px solid currentColor; }
+      .policy .policy__row { padding: var(--s-300) 0; border-bottom: 1px solid rgba(128,128,128,0.35); }
+      .policy .policy__row h3 { font-size: 16px; font-weight: 600; margin-bottom: var(--s-100); }
+      .policy .policy__row p { font-size: 15px; }
+      .policy .policy__date { margin-top: var(--s-600); font-size: 14px; }
+      .policy a { word-break: break-all; }
+    </style>
+
+    <div class="prose policy">
+
+      <p>合同会社en（以下「当社」といいます）は、当社ウェブサイト（https://en-ai.co.jp/。以下「本サイト」といいます）および当社の事業において取り扱う個人情報について、個人情報の保護に関する法律（以下「個人情報保護法」といいます）その他の関係法令およびガイドラインを遵守し、以下のとおり適切に取り扱います。</p>
+
+      <h2>1. 事業者情報</h2>
+      <dl>
+        <dt>名称</dt><dd>合同会社en</dd>
+        <dt>代表者</dt><dd>代表社員　三井 正相</dd>
+        <dt>所在地</dt><dd>東京都中央区銀座1丁目12番4号 N&amp;E BLD. 6F</dd>
+      </dl>
+
+      <h2>2. 取得する情報</h2>
+      <p>当社は、本サイトにおいて次の情報を取得します。</p>
+      <ol>
+        <li><strong>お問い合わせフォームにご入力いただく情報</strong><br>会社名、お名前、メールアドレス、AIツールの導入状況、AI化したい作業の内容（任意）</li>
+        <li><strong>ご相談・お取引の過程でご提供いただく情報</strong><br>メール・オンライン会議等でのやり取りの内容、ご担当者の部署・役職・電話番号、契約・請求に必要な情報</li>
+        <li><strong>本サイトのご利用時に自動的に取得する情報</strong><br>Cookie等の識別子、IPアドレス、ブラウザ・端末・OSの種類、閲覧したページ、閲覧日時、滞在時間、参照元、おおよその地域などのアクセス情報</li>
+      </ol>
+
+      <h2>3. 利用目的</h2>
+      <p>当社は、取得した情報を次の目的の範囲内で利用します。</p>
+      <ul>
+        <li>お問い合わせ・ご相談への回答およびご連絡のため</li>
+        <li>当社サービスに関するご提案、お見積り、ご説明のため</li>
+        <li>契約の締結・履行、納品、請求、アフターサポートのため</li>
+        <li>本サイトの利用状況の分析、内容および当社サービスの改善のため</li>
+        <li>不正な送信・アクセスの防止、本サイトの安全な運営のため</li>
+        <li>法令に基づく対応のため</li>
+      </ul>
+      <p>上記の目的を変更する場合は、変更前の目的と関連性があると合理的に認められる範囲で行い、変更後の目的を本ページで公表します。</p>
+
+      <h2>4. 第三者への提供</h2>
+      <p>当社は、次の場合を除き、あらかじめご本人の同意を得ることなく個人データを第三者に提供しません。</p>
+      <ul>
+        <li>法令に基づく場合</li>
+        <li>人の生命、身体または財産の保護のために必要があり、ご本人の同意を得ることが困難な場合</li>
+        <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要があり、ご本人の同意を得ることが困難な場合</li>
+        <li>国の機関、地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに協力する必要があり、ご本人の同意を得ることで当該事務の遂行に支障を及ぼすおそれがある場合</li>
+        <li>その他、個人情報保護法で認められる場合</li>
+      </ul>
+      <p>当社は、取得した個人情報を販売することはありません。</p>
+
+      <h2>5. 業務の委託と外部サービスの利用</h2>
+      <p>当社は、利用目的の達成に必要な範囲で、本サイトの配信、お問い合わせ内容の通知、アクセス解析等の業務に外部事業者のサービスを利用しており、これに伴い個人情報の取扱いを委託することがあります。委託にあたっては、適切な事業者を選定し、必要かつ適切な監督を行います。</p>
+      <p>これらの事業者には米国等の外国に所在する事業者が含まれ、情報が外国のサーバーで保管・処理される場合があります。具体的なサービスと送信される情報は、「6. アクセス解析・Cookie等の利用（外部送信について）」に記載のとおりです。</p>
+
+      <h2>6. アクセス解析・Cookie等の利用（外部送信について）</h2>
+      <p>本サイトでは、利用状況の把握、サービスの改善、安全な運営のために、以下の外部サービスを利用しています。これに伴い、本サイトを閲覧された方のブラウザから各事業者へ情報が送信されます。これらの情報から当社が特定の個人を識別することはありません。</p>
+
+      <div class="policy__table">
+
+        <div class="policy__row">
+          <h3>Google アナリティクス（Google LLC）</h3>
+          <p><strong>送信される情報：</strong>Cookie等の識別子、閲覧ページのURL、閲覧日時、滞在時間、参照元、ブラウザ・端末の情報、IPアドレスに基づくおおよその地域</p>
+          <p><strong>利用目的：</strong>本サイトの利用状況を分析し、内容の改善に役立てるため。Google シグナルを有効にしているため、Google アカウントで広告のカスタマイズを許可している方については、年齢層・性別・興味関心などの情報が統計的に集計された形で当社に提供される場合があります。</p>
+          <p><strong>無効化の方法：</strong>ブラウザの設定でCookieを無効にする、または Google が提供する「<a class="link" href="https://tools.google.com/dlpage/gaoptout?hl=ja" target="_blank" rel="noopener">Google アナリティクス オプトアウト アドオン</a>」を利用することで、収集を停止できます。</p>
+          <p><strong>詳細：</strong><a class="link" href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Google プライバシーポリシー</a>／<a class="link" href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Google のサービスを使用するサイトやアプリから収集した情報の Google による使用</a></p>
+        </div>
+
+        <div class="policy__row">
+          <h3>Cloudflare（Cloudflare, Inc.）</h3>
+          <p><strong>送信される情報：</strong>IPアドレス、閲覧ページのURL、閲覧日時、参照元、ブラウザ・端末の情報</p>
+          <p><strong>利用目的：</strong>本サイトの配信・セキュリティ対策（CDN）、および Cloudflare Web Analytics によるアクセス状況の統計的な把握のため。Cloudflare Web Analytics は Cookie を使用せず、個々の閲覧者を追跡しません。</p>
+          <p><strong>詳細：</strong><a class="link" href="https://www.cloudflare.com/ja-jp/privacypolicy/" target="_blank" rel="noopener">Cloudflare プライバシーポリシー</a></p>
+        </div>
+
+        <div class="policy__row">
+          <h3>Google Fonts（Google LLC）</h3>
+          <p><strong>送信される情報：</strong>IPアドレス、ブラウザ・端末の情報、参照元のURL</p>
+          <p><strong>利用目的：</strong>本サイトの文字（ウェブフォント）を表示するため。</p>
+          <p><strong>詳細：</strong><a class="link" href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener">Google プライバシーポリシー</a></p>
+        </div>
+
+        <div class="policy__row">
+          <h3>Resend（Resend, Inc.）</h3>
+          <p><strong>送信される情報：</strong>お問い合わせフォームにご入力いただいた内容（会社名、お名前、メールアドレス、AIツールの導入状況、AI化したい作業の内容）</p>
+          <p><strong>利用目的：</strong>お問い合わせ内容を当社の担当者へメールで通知するため。フォームを送信された場合にのみ送信されます。</p>
+          <p><strong>詳細：</strong><a class="link" href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend Privacy Policy</a></p>
+        </div>
+
+      </div>
+
+      <p>なお、当社は Google Search Console を利用して、検索結果における本サイトの表示状況を確認しています。これは Google が保有する検索の統計データを閲覧するもので、本サイトの閲覧者から新たに情報を取得するものではありません。</p>
+
+      <h2>7. 安全管理措置</h2>
+      <p>当社は、取り扱う個人データの漏えい、滅失または毀損の防止その他の安全管理のため、次の措置を講じています。</p>
+      <ul>
+        <li>個人データの取扱いに関する責任者を定め、取扱いのルールを整備しています。</li>
+        <li>個人データを取り扱う機器・サービスへのアクセスを必要な者に限定し、二要素認証の利用、通信の暗号化、ソフトウェアの更新などの対策を行っています。</li>
+        <li>外部サービスを利用する際は、提供事業者の安全管理体制を確認したうえで選定しています。外国の事業者が提供するサービスを利用する場合は、当該国の個人情報保護に関する制度を把握したうえで必要な措置を講じます。</li>
+        <li>利用目的の達成に必要な期間を過ぎた個人データは、遅滞なく消去するよう努めます。</li>
+      </ul>
+
+      <h2>8. 保有個人データの開示等のご請求</h2>
+      <p>ご本人またはその代理人は、当社が保有する個人データについて、利用目的の通知、開示、内容の訂正・追加・削除、利用の停止・消去、第三者への提供の停止、第三者提供記録の開示を請求することができます。</p>
+      <p>ご請求は「9. お問い合わせ窓口」までご連絡ください。ご本人（または代理人）であることを確認したうえで、法令の定めに従い、合理的な期間内に対応します。法令により対応できない場合は、その旨と理由をお知らせします。</p>
+      <p>開示等のご請求に手数料はいただきません。</p>
+
+      <h2>9. お問い合わせ窓口</h2>
+      <p>個人情報の取扱いに関するご質問、ご意見、苦情および開示等のご請求は、下記までご連絡ください。</p>
+      <dl>
+        <dt>窓口</dt><dd>合同会社en　個人情報お問い合わせ窓口</dd>
+        <dt>連絡方法</dt><dd><a class="link" href="/#form">お問い合わせフォーム</a>（「AI化したい作業」欄に、個人情報に関するお問い合わせである旨をご記入ください）</dd>
+      </dl>
+
+      <h2>10. 本ポリシーの改定</h2>
+      <p>当社は、法令の改正や取扱いの変更に応じて、本ポリシーを改定することがあります。改定した場合は本ページに掲載し、掲載した時点から効力を生じるものとします。重要な変更を行う場合は、本サイト上でわかりやすくお知らせします。</p>
+
+      <p class="policy__date">制定日：2026年11月10日<br>合同会社en</p>
+
+      <p><a class="link" href="/">トップページへ戻る</a></p>
+
     </div>
   </div>
 </main>

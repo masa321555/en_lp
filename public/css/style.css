@@ -87,7 +87,6 @@ em { font-style: normal; }
 p { text-wrap: pretty; }
 .prose { max-width: 38em; }
 .prose p + p { margin-top: var(--s-300); }
-.prose p + .h3 { margin-top: var(--s-500); }
 
 /* buttons */
 .btn {
